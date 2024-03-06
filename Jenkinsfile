@@ -9,14 +9,18 @@ pipeline {
     environment {
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
-        NEXUS_URL = "172.31.40.209:8081"
+        NEXUS_URL = "192.168.10.12:8081"
         NEXUS_REPOSITORY = "vprofile-release"
-	NEXUS_REPOGRP_ID    = "vprofile-grp-repo"
+	    NEXUS_REPOGRP_ID    = "vprofile-grp-repo"
         NEXUS_CREDENTIAL_ID = "nexuslogin"
         ARTVERSION = "${env.BUILD_ID}"
+        registry_AWS = 'ecr:ap-southeast-1:aws'
+        app = '075119686808.dkr.ecr.ap-southeast-1.amazonaws.com/javaapp'
+        vprofil = "https://075119686808.dkr.ecr.ap-southeast-1.amazonaws.com"
+
     }
 	
-    stages{
+    stages{ 
         
         stage('BUILD'){
             steps {
@@ -110,6 +114,13 @@ pipeline {
 		    else {
                         error "*** File: ${artifactPath}, could not be found";
                     }
+                }
+            }
+        }
+        stage('build app image'){
+            steps{
+                script{
+                    dockerImage=docker.build(app + ":$BUILD_NUMBER", "./Docker-app/")
                 }
             }
         }
