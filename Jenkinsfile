@@ -9,6 +9,8 @@ pipeline {
     environment {
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
+	NEXUS_IP = "192.168.10.12"
+	NEXUS_PORT = "8081"
         NEXUS_URL = "192.168.10.12:8081"
         NEXUS_REPOSITORY = "vprofile-release"
 	    NEXUS_REPOGRP_ID    = "vprofile-grp-repo"
