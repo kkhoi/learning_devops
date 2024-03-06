@@ -7,6 +7,10 @@ pipeline {
     }
 */	
     environment {
+	    NEXUS_USER = 'admin'
+		NEXUS_PASS = '123456'
+		RELEASE_REPO = 'vprofile-release'
+		CENTRAL_REPO = 'vpro-maven-central'
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
 	NEXUSIP = "192.168.10.12"
