@@ -1,11 +1,10 @@
 pipeline {
     
 	agent any
-/*	
 	tools {
-        maven "maven3"
+        jdk "JDK8"
+        maven "MAVEN"
     }
-*/	
     environment {
 	    NEXUS_USER = 'admin'
 		NEXUS_PASS = '123456'
