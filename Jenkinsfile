@@ -16,7 +16,7 @@ pipeline {
         ARTVERSION = "${env.BUILD_ID}"
         registry_AWS = 'ecr:ap-southeast-1:aws'
         app = '075119686808.dkr.ecr.ap-southeast-1.amazonaws.com/javaapp'
-        vprofil = "https://075119686808.dkr.ecr.ap-southeast-1.amazonaws.com"
+        vprofileRegistry = "https://075119686808.dkr.ecr.ap-southeast-1.amazonaws.com"
 
     }
 	
@@ -124,7 +124,16 @@ pipeline {
                 }
             }
         }
-
+        stage('upload app image'){
+            steps{
+                script{
+                    docker.withRegistry(vprofileRegistry, registry_AWS){
+                        dockerImage.push("$BUILD_NUMBER")
+                        dockerImage.push('latest')
+                    }
+                }
+            }
+        }
 
     }
 
