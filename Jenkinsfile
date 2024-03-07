@@ -21,7 +21,7 @@ pipeline {
 	NEXUS_REPOGRP_ID    = "vprofile-grp-repo"
         NEXUS_CREDENTIAL_ID = "nexus"
         ARTVERSION = "${env.BUILD_ID}"
-        registry_AWS = 'ecr:ap-southeast-1:aws'
+        registryCredential = 'ecr:ap-southeast-1:aws'
         appRegistry = '075119686808.dkr.ecr.ap-southeast-1.amazonaws.com/javaapp'
         vprofileRegistry = "https://075119686808.dkr.ecr.ap-southeast-1.amazonaws.com"
 
