@@ -6,17 +6,17 @@ pipeline {
         maven "MAVEN"
     }
     environment {
-	SNAP-REPO = 'vprofile-snapshot'
+	SNAP_REPO = 'vprofile-snapshot'
 	NEXUS-USER = 'admin'
-	NEXUS-PASS = '123456'
+	NEXUS_PASS = '123456'
 	RELEASE_REPO = 'vprofile-release'
-	CENTRAL-REPO = 'vpro-maven-central'
+	CENTRAL_REPO = 'vpro-maven-central'
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
 	NEXUSIP = "192.168.10.12"
 	NEXUSPORT = "8081"
         NEXUS_URL = "192.168.10.12:8081"
-	NEXUS-GRP-REPO = 'vpro-maven-group'
+	NEXUS_GRP_REPO = 'vpro-maven-group'
         NEXUS_REPOSITORY = "vprofile-release"
 	NEXUS_REPOGRP_ID    = "vprofile-grp-repo"
         NEXUS_CREDENTIAL_ID = "nexuslogin"
