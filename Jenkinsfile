@@ -13,7 +13,7 @@ pipeline {
 	CENTRAL_REPO = 'vpro-maven-central'
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
-	NEXUSIP = "192.168.33.12"
+	NEXUSIP = "192.168.10.12"
 	NEXUSPORT = "8081"
         NEXUS_URL = "192.168.10.12:8081"
 	NEXUS_GRP_REPO = 'vpro-maven-group'
