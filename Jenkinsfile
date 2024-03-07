@@ -16,6 +16,7 @@ pipeline {
 	NEXUSIP = "192.168.10.12"
 	NEXUSPORT = "8081"
         NEXUS_URL = "192.168.10.12:8081"
+	NEXUS_GRP_REPO = 'vpro-maven-group'
         NEXUS_REPOSITORY = "vprofile-release"
 	NEXUS_REPOGRP_ID    = "vprofile-grp-repo"
         NEXUS_CREDENTIAL_ID = "nexuslogin"
