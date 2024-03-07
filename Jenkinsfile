@@ -19,7 +19,7 @@ pipeline {
 	NEXUS_GRP_REPO = 'vpro-maven-group'
         NEXUS_REPOSITORY = "vprofile-release"
 	NEXUS_REPOGRP_ID    = "vprofile-grp-repo"
-        NEXUS_CREDENTIAL_ID = "nexuslogin"
+        NEXUS_CREDENTIAL_ID = "nexus"
         ARTVERSION = "${env.BUILD_ID}"
         registry_AWS = 'ecr:ap-southeast-1:aws'
         app = '075119686808.dkr.ecr.ap-southeast-1.amazonaws.com/javaapp'
