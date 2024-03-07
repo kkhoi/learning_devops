@@ -6,18 +6,18 @@ pipeline {
         jdk "OracleJDK8"
     }
     environment {
-	    SNAP_REPO = 'vprofile-snapshot'
-	    NEXUS_USER = 'admin'
-		NEXUS_PASS = '123456'
-		RELEASE_REPO = 'vprofile-release'
-		CENTRAL_REPO = 'vpro-maven-central'
+	SNAP_REPO = 'vprofile-snapshot'
+	NEXUS_USER = 'admin'
+	NEXUS_PASS = '123456'
+	RELEASE_REPO = 'vprofile-release'
+	CENTRAL_REPO = 'vpro-maven-central'
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
 	NEXUSIP = "192.168.10.12"
 	NEXUSPORT = "8081"
         NEXUS_URL = "192.168.10.12:8081"
         NEXUS_REPOSITORY = "vprofile-release"
-	    NEXUS_REPOGRP_ID    = "vprofile-grp-repo"
+	NEXUS_REPOGRP_ID    = "vprofile-grp-repo"
         NEXUS_CREDENTIAL_ID = "nexuslogin"
         ARTVERSION = "${env.BUILD_ID}"
         registry_AWS = 'ecr:ap-southeast-1:aws'
@@ -118,5 +118,5 @@ pipeline {
             }
           }
         }
-
+    }
 }
